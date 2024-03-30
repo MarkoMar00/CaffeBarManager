@@ -1,8 +1,9 @@
 package hr.tvz.pios.caffebarmanager.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -12,7 +13,8 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private LocalDate issueTimeOfOrder;
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime issueTimeOfOrder;
 
     private Integer orderStatus;
 
@@ -32,11 +34,11 @@ public class Order {
         this.id = id;
     }
 
-    public LocalDate getIssueTimeOfOrder() {
+    public LocalDateTime getIssueTimeOfOrder() {
         return issueTimeOfOrder;
     }
 
-    public void setIssueTimeOfOrder(LocalDate issueTimeOfOrder) {
+    public void setIssueTimeOfOrder(LocalDateTime issueTimeOfOrder) {
         this.issueTimeOfOrder = issueTimeOfOrder;
     }
 
