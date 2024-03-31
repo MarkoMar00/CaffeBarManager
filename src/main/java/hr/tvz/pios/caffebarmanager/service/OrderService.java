@@ -11,7 +11,7 @@ public interface OrderService {
 
     Optional<OrderDto> findById(Long id);
 
-    OrderDto updateOrderStatus(Long recipeId, Integer orderStatus);
+    OrderDto updateOrderStatus(Long orderId, Integer orderStatus);
 
     Optional<OrderDto> save(OrderDto orderDto);
 }

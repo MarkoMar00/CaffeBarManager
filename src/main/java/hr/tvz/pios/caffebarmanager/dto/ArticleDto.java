@@ -1,6 +1,5 @@
 package hr.tvz.pios.caffebarmanager.dto;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,12 +9,14 @@ import java.math.BigDecimal;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderArticleDto {
+public class ArticleDto {
     private Long id;
 
-    private Integer amount;
+    private String name;
 
-    private BigDecimal pricePerUnit;
+    private String description;
 
-    private Long articleId;
+    private BigDecimal price;
+
+    private Integer availableAmount;
 }

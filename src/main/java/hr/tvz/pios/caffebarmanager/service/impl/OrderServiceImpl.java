@@ -29,9 +29,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public OrderDto updateOrderStatus(Long recipeId, Integer orderStatus) {
+    public OrderDto updateOrderStatus(Long orderId, Integer orderStatus) {
 
-        Order order = orderRepository.findById(recipeId).orElseThrow();
+        Order order = orderRepository.findById(orderId).orElseThrow();
 
         order.setOrderStatus(orderStatus);
 
