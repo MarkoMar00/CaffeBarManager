@@ -3,7 +3,7 @@ package hr.tvz.pios.caffebarmanager.domain;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "ORDER_STATISTICS")
@@ -14,7 +14,7 @@ public class OrderStatistic {
 
     private BigDecimal totalPrice;
 
-    private LocalDate dateAndTime;
+    private LocalDateTime dateAndTime;
 
     @OneToOne
     @JoinColumn(name = "order_id")
@@ -36,11 +36,11 @@ public class OrderStatistic {
         this.totalPrice = totalPrice;
     }
 
-    public LocalDate getDateAndTime() {
+    public LocalDateTime getDateAndTime() {
         return dateAndTime;
     }
 
-    public void setDateAndTime(LocalDate dateAndTime) {
+    public void setDateAndTime(LocalDateTime dateAndTime) {
         this.dateAndTime = dateAndTime;
     }
 
