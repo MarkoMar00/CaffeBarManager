@@ -3,6 +3,7 @@ package hr.tvz.pios.caffebarmanager.domain;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Table(name = "ARTICLES")
@@ -19,8 +20,8 @@ public class Article {
 
     private Integer availableAmount;
 
-    @OneToOne(mappedBy = "article")
-    private OrderArticle orderArticle;
+    @OneToMany(mappedBy = "article")
+    private List<OrderArticle> orderArticles;
 
     public Long getId() {
         return id;
@@ -62,11 +63,11 @@ public class Article {
         this.availableAmount = availableAmount;
     }
 
-    public OrderArticle getOrderArticle() {
-        return orderArticle;
+    public List<OrderArticle> getOrderArticles() {
+        return orderArticles;
     }
 
-    public void setOrderArticle(OrderArticle orderArticle) {
-        this.orderArticle = orderArticle;
+    public void setOrderArticle(List<OrderArticle> orderArticles) {
+        this.orderArticles = orderArticles;
     }
 }

@@ -19,7 +19,7 @@ public class OrderArticle {
     @JoinColumn(name = "order_id")
     private Order order;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "article_id")
     private Article article;
 
