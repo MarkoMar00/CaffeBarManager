@@ -73,6 +73,7 @@ public class OrderArticleServiceImpl implements OrderArticleService {
         orderArticleDto.setAmount(orderArticle.getAmount());
         orderArticleDto.setPricePerUnit(orderArticle.getPricePerUnit());
         orderArticleDto.setArticleId(orderArticle.getArticle().getId());
+        orderArticleDto.setOrderId(orderArticle.getOrder().getId());
 
         return orderArticleDto;
     }

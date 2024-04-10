@@ -18,4 +18,6 @@ public class OrderArticleDto {
     private BigDecimal pricePerUnit;
 
     private Long articleId;
+
+    private Long orderId;
 }
