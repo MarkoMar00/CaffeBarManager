@@ -129,7 +129,7 @@ class OrderStatisticServiceImplTest {
             Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
 
             for (OrderStatistic orderStatistic : orderStatistics) {
-                Chunk chunk = new Chunk("Vrijeme narudžbe: " + orderStatistic.getDateAndTime(), headlineFont);
+                Chunk chunk = new Chunk("Vrijeme narudzbe: " + orderStatistic.getDateAndTime(), headlineFont);
                 statisticReport.add(chunk);
                 statisticReport.add(new Paragraph("\n"));
 
@@ -137,7 +137,7 @@ class OrderStatisticServiceImplTest {
                 statisticReport.add(chunk);
                 statisticReport.add(new Paragraph("\n"));
 
-                chunk = new Chunk("Ukupna cijena narudžbe: " + orderStatistic.getTotalPrice(), font);
+                chunk = new Chunk("Ukupna cijena narudzbe: " + orderStatistic.getTotalPrice(), font);
                 statisticReport.add(chunk);
                 statisticReport.add(new Paragraph("\n"));
             }
